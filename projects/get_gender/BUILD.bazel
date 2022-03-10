@@ -1,0 +1,15 @@
+load("@my_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "get_gender",
+    srcs = ["function.py"],
+    visibility=["//visibility:public"],
+)
+
+py_test(
+    name = "gender_test",
+    srcs = ["gender_test.py"],
+    deps = [
+        "//projects/get_gender:get_gender",
+    ],
+)
