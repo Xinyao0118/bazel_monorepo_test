@@ -1,0 +1,13 @@
+py_library(
+    name = "enrich_DMAP",
+    srcs = ["enrich_DMAP.py"],
+    visibility=["//visibility:public"],
+)
+
+py_test(
+    name = "enrich_DMAP_test",
+    srcs = ["enrich_DMAP_test.py"],
+    deps = [
+        "enrich_DMAP",
+    ],
+)
