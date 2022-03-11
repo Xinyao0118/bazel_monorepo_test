@@ -1,0 +1,12 @@
+py_library(
+    name = "get_gender",
+    srcs = ["get_gender.py"],
+    #visibility=["//mlops:subpackages"],
+    visibility=["//visibility:public"],
+)
+    name = "get_gender_test",
+    srcs = ["get_gender_test.py"],
+    deps = [
+        "get_gender",
+    ],
+)
